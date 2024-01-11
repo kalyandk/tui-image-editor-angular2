@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/tui-image-editor-angular2",
+  "deleteDestPath": false,
+  "assets": ["**/checkboxes.scss", "**/theme.scss"],
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "tslib",
+    "@ng-bootstrap/ng-bootstrap",
+    "bootstrap",
+    "ngx-color-picker",
+    "tui-image-editor",
+    "@ngx-translate/core",
+    "fabric",
+    "@popperjs/core"
+  ]
+}

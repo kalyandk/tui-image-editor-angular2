@@ -1,0 +1,25 @@
+{
+  "name": "tui-image-editor-angular2",
+  "version": "14.0.2",
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@ng-bootstrap/ng-bootstrap": "^13.0.0",
+    "@popperjs/core": "^2.10.2",
+    "ngx-color-picker": "^12.0.1",
+    "fabric": "^5.2.4",
+    "tui-image-editor": "3.14.3",
+    "@ngx-translate/core": "^14.0.0"
+  },
+  "devDependencies": {
+    "@angular/localize": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldrashan/angular-tui.git"
+  }
+}
