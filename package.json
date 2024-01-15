@@ -12,7 +12,7 @@
     "publish-npm": "cd dist/tui-image-editor-angular2 && npm publish",
     "publish": "npm-run-all clear-dist publish-build publish-npm",
     "compile-scss-min-tui-image-editor-angular2": "sass projects/tui-image-editor-angular2/src/theme.scss projects/tui-image-editor-angular2/src/theme.min.css --style=compressed",
-    "build-tui-image-editor-angular2": "ng build tui-image-editor-angular2",
+    "build-tui-image-editor-angular2": "ng build tui-image-editor-angular2 --watch",
     "link-tui-image-editor-angular2": "cd ./dist/tui-image-editor-angular2 && npm link",
     "build-and-link-tui-image-editor-angular2": "npm-run-all build-tui-image-editor-angular2 link-tui-image-editor-angular2"
   },
