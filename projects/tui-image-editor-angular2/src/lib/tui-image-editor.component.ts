@@ -24,6 +24,7 @@ import { HistoryItem, HistoryItemType } from './interfaces/history-item';
 import { ImageSize } from './interfaces/image-size';
 import { HistoryService } from './services/history.service';
 import { FilterComponent } from './submenus/filter/filter.component';
+import heic2any from "heic2any";
 import {
   clearSelection,
   dataUrlToBlob,
@@ -244,7 +245,21 @@ export class TuiImageEditorComponent
     this.historyService.next();
   }
 
-  loadImage(file: string | File) {
+  loadImage(file: string | File | Blob) {
+    const type=(<any>file)?.name?.split('.').pop();
+    if(type==='heic'){
+      heic2any({blob:<Blob>file}).then(data=>{
+        file=<Blob>data;
+        this.uploadIMage(file);
+      }).catch(err=>{
+        console.log("Err",err)
+      })
+    }else{
+      this.uploadIMage(file);
+    } 
+  }
+
+  uploadIMage(file:string | File | Blob){
     if (file != null) {
       let imageUrl: string = null;
       if (typeof file === 'string') {
@@ -254,7 +269,6 @@ export class TuiImageEditorComponent
           alert('This browser does not support file-api');
           return;
         }
-
         imageUrl = URL.createObjectURL(file);
       }
 
